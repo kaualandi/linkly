@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Fruktur&display=swap');
+
+:root {
+    --primary: #1245a0;
+    --primary-tp: #0808085b;
+    --background-one: #ffffff;
+    /* --background-two: #1246a038; */
+    --background-two: #0808083d;
+    --title: #fffffe;
+    --paragraph: #d4d4d4;
+    --title-hover: #080808;
+    --paragraph-hover: #1d1d1d;
+    --sans-serif: 'Ubuntu', sans-serif;
+    --cursive: 'Fruktur', cursive;
+    --br: 25px;
+    --br-two: 15px;
+}
+img, video, iframe {
+    width: 100%;
+    border-radius: var(--br-two);
+}
+html {
+    background-image: url('./../img/background.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+
+}
+a {
+    font-family: var(--sans-serif);
+    text-decoration: none;
+    transition: all .3s;
+    cursor: pointer;
+}
+a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+html .background {
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 0;
+}
+#hiddenAbout, #hiddenMusic {
+    overflow: hidden;
+    transition: all 0.3s;
+    
+}
+#hiddenAbout video {
+    height: 374.5px;
+}
+body {
+    background-color: var(--primary-tp);
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ! HEADER */
+header {
+    font-family: var(--cursive);
+    color: var(--title);
+    padding: 1.5rem 0;
+}
+header .container .profile {
+    padding: 1rem 0;
+    background-color: var(--background-two);
+    margin: auto;
+    text-align: center;
+    border-radius: var(--br);
+}
+header .container .profile img {
+    border-radius: 50%;
+    max-width: 150px;
+    border: 4px double var(--primary);
+}
+header .container .profile h1 {
+    margin-top: 1rem;
+}
+
+/* ! MAIN */
+footer {
+    padding: 1.5rem 0;
+}
+main .container .itens-container {
+    padding: 1.5rem 2rem;
+    background-color: var(--background-two);
+    margin: auto;
+    border-radius: var(--br);
+    font-family: var(--sans-serif);
+}
+main .container .itens-container .item+.item {
+    margin-top: 1rem;
+}
+main .container .itens-container a{
+    text-decoration: none;
+    color: var(--title);
+    padding: 1rem 1rem;
+    display: block;
+    border-radius: var(--br-two);
+    border: 2px solid var(--primary);
+    display: flex;
+    align-items: center;
+}
+main .container .itens-container #about {
+    color: var(--paragraph);
+}
+main .container .itens-container a svg {
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+
+/* ! FOOTER */
+footer p, footer a {
+    font-family: var(--sans-serif);
+    margin: 0;
+    color: var(--paragraph);
+}
+footer .container .row {
+    padding: 1.5rem 2rem;
+    background-color: var(--background-two);
+    margin: auto;
+    border-radius: var(--br);
+}
+
+/* ! ANIMATION */
+/* * Sweep To Right */
+.hvr-sweep-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+.hvr-sweep-to-right:before {
+    border-radius: 10px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+    border-radius: 10px;
+    color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+    border-radius: 10px;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
